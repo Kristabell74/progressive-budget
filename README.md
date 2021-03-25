@@ -47,7 +47,7 @@ npm i
 
 ## Usage
 
-This application will keep track of the budget online and offline
+This application will keep track of the budget online and offline.
 
 ## License
 
@@ -55,7 +55,14 @@ This project is licensed under the MIT license.
   
 ## Contributing
 
-schoolwork, google.com
+schoolwork, google.com, tutor Lawrence with deployment
+
+## Start Application Locally 
+
+localhost: 3000
+
+npm start
+
 
 ## Tests
 
