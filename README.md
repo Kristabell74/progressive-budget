@@ -25,6 +25,15 @@ This is a react project that uses react to create an interactive user database
 
 ## Installation
 
+
+## To start application on localserver:3000.
+
+node server.js
+
+##Github and Web Links
+
+https://github.com/Kristabell74/progressive-budget.gitxxxxx
+
 To install necessary dependencies, run the following command:
 
 ```
@@ -33,7 +42,7 @@ npm i
 
 ## Usage
 
-It does not work ye it is still in progress
+This application will keep track of the budget online and offline
 
 ## License
 
@@ -41,7 +50,7 @@ This project is licensed under the MIT license.
   
 ## Contributing
 
-school
+schoolwork, google.com
 
 ## Tests
 
