@@ -1,4 +1,4 @@
-# User Directory
+# Progressive-budget
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
@@ -26,13 +26,14 @@ This is a react project that uses react to create an interactive user database
 ## Installation
 
 
-## To start application on localserver:3000.
+## To start 
 
+local server: 3000 
 node server.js
 
-##Github and Web Links
+## Github and Web Links
 
-https://github.com/Kristabell74/progressive-budget.gitxxxxx
+https://github.com/Kristabell74/progressive-budget.git
 
 To install necessary dependencies, run the following command:
 
