@@ -1,3 +1,6 @@
+<img width="1031" alt="Screen Shot 2021-03-25 at 8 38 29 AM" src="https://user-images.githubusercontent.com/69989359/112491529-053c5800-8d46-11eb-9e76-60ac4e14925c.png">
+<img width="986" alt="Screen Shot 2021-03-25 at 8 38 45 AM" src="https://user-images.githubusercontent.com/69989359/112491536-07061b80-8d46-11eb-99a3-15bb206ff4f5.png">
+<img width="1057" alt="Screen Shot 2021-03-25 at 8 40 00 AM" src="https://user-images.githubusercontent.com/69989359/112491543-08374880-8d46-11eb-8aff-027752ae1682.png">
 # Progressive-budget
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
@@ -34,6 +37,7 @@ node server.js
 ## Github and Web Links
 
 https://github.com/Kristabell74/progressive-budget.git
+
 
 To install necessary dependencies, run the following command:
 
