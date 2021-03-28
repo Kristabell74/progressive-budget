@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "14.14.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm instal"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm instal",
+    "postinstall": "npm rebuild grpc --target=10.15.0 --target_arch=x64 --target_platform=linux --target_libc=glibc"
   },
   "author": "",
   "license": "ISC",
