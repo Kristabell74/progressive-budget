@@ -31,8 +31,8 @@ mongoose
   .catch(err => console.log(err))
 
 
-app.use(require("./routes/api.js"));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api', require("./routes/api.js"));
 
 
 
