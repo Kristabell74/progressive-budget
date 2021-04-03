@@ -26,7 +26,6 @@ request.onerror = (act) => {
 //saves the records
 function saveRecord(record) {
     const transaction = db.transaction(["pending"], "readwrite");
-
     const store = transaction.objectStore("pending");
 
     store.add(record);
@@ -38,14 +37,10 @@ function checkDb() {
     const store = transaction.objectStore("pending");
     const getAll = store.getAll();
 
-
-
     //gets and posts and then transactions
     getAll.onsuccess = () => {
 
-
         if (getAll.result.length > 0) {
-
 
             //gets the api transaction and posts it
             fetch("/api/transaction/bulk", {
@@ -54,14 +49,12 @@ function checkDb() {
                 headers: {
                     Accept: "application/json, text/plain, */*",
                     "Content-Type": "application/json"
-                }
+                },
             })
 
                 //waits to pick up the pending transactions
-                .then(response => response.json())
+                .then((response) => response.json())
                 .then(() => {
-
-                    //deletes data if the process is sucessful
                     const transaction = db.transaction(["pending"], "readwrite");
                     const store = transaction.objectStore("pending");
                     store.clear();
@@ -71,4 +64,4 @@ function checkDb() {
 }
 
 // listens for app to come online
-window.addEventListener("online", checkDb);
+window.addEventListener("online", checkDatabase);
