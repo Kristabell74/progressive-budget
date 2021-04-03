@@ -2,6 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
+const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 
@@ -30,8 +31,8 @@ mongoose
   .catch(err => console.log(err))
 
 
-app.use(express.static("public"));
 app.use(require("./routes/api.js"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
