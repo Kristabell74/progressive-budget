@@ -26,6 +26,7 @@ request.onerror = (act) => {
 //saves the records
 function saveRecord(record) {
     const transaction = db.transaction(["pending"], "readwrite");
+
     const store = transaction.objectStore("pending");
 
     store.add(record);
@@ -36,6 +37,8 @@ function checkDb() {
     const transaction = db.transaction(["pending"], "readwrite");
     const store = transaction.objectStore("pending");
     const getAll = store.getAll();
+
+
 
     //gets and posts and then transactions
     getAll.onsuccess = () => {

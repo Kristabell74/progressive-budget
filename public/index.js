@@ -1,14 +1,13 @@
 let transactions = [];
 let myChart;
 
-fetch("./api/transaction")
+fetch("/api/transaction")
   .then(response => {
     return response.json();
   })
   .then(data => {
     // save db data on global variable
     transactions = data;
-
     populateTotal();
     populateTable();
     populateChart();
@@ -105,7 +104,6 @@ function sendTransaction(isAdding) {
   }
 
   // add to beginning of current array of data
-  console.log(transactions)
   transactions.unshift(transaction);
 
   // re-run logic to populate ui with new record
@@ -151,4 +149,4 @@ document.querySelector("#add-btn").onclick = function () {
 
 document.querySelector("#sub-btn").onclick = function () {
   sendTransaction(false);
-};
+}
