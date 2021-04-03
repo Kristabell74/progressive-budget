@@ -64,4 +64,4 @@ function checkDb() {
 }
 
 // listens for app to come online
-window.addEventListener("online", checkDatabase);
+window.addEventListener("online", checkDb);

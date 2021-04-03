@@ -1,14 +1,12 @@
 let transactions = [];
 let myChart;
 
-
-fetch("./api/transaction")
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
+fetch("/api/transaction")
+  .then((response) => response.json())
+  .then((data) => {
     // save db data on global variable
     transactions = data;
+
     populateTotal();
     populateTable();
     populateChart();
@@ -16,11 +14,10 @@ fetch("./api/transaction")
 
 function populateTotal() {
   // reduce transaction amounts to a single total value
-  let total = transactions
-  then.reduce((total, t) => {
+  let total = transactions.reduce((total, t) => {
     return total + parseInt(t.value);
   }, 0)
-    .toFixed(2)
+    .toFixed(2);
 
   let totalEl = document.querySelector("#total");
   totalEl.textContent = total;
@@ -107,7 +104,7 @@ function sendTransaction(isAdding) {
   }
 
   // add to beginning of current array of data
-  //transactions.unshift(transaction);
+  transactions.unshift(transaction);
 
   // re-run logic to populate ui with new record
   populateChart();
@@ -115,7 +112,7 @@ function sendTransaction(isAdding) {
   populateTotal();
 
   // also send to server
-  fetch("./api/transaction", {
+  fetch("/api/transaction", {
     method: "POST",
     body: JSON.stringify(transaction),
     headers: {
