@@ -15,9 +15,11 @@ fetch("./api/transaction")
 
 function populateTotal() {
   // reduce transaction amounts to a single total value
-  const total = transactions.reduce((total, t) => {
-    return total + parseInt(t.value);
-  }, 0);
+  let total = transactions
+    .reduce((total, t) => {
+      return total + parseInt(t.value);
+    }, 0)
+    .toFixed(2);
 
   let totalEl = document.querySelector("#total");
   totalEl.textContent = total;
@@ -51,7 +53,7 @@ function populateChart() {
   });
 
   // create incremental values for chart
-  let data = reversed.map(t => {
+  let data = reversed.map((t) => {
     sum += parseInt(t.value);
     return sum;
   });
@@ -72,8 +74,8 @@ function populateChart() {
         fill: true,
         backgroundColor: "#6666ff",
         data
-      }]
-    }
+      }],
+    },
   });
 }
 
@@ -118,16 +120,13 @@ function sendTransaction(isAdding) {
     headers: {
       Accept: "application/json, text/plain, */*",
       "Content-Type": "application/json"
-    }
+    },
   })
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       if (data.errors) {
         errorEl.textContent = "Missing Information";
-      }
-      else {
+      } else {
         // clear form
         nameEl.value = "";
         amountEl.value = "";
