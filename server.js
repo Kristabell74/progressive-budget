@@ -19,7 +19,8 @@ app.use(require("./routes/api.js"));
 // mongoose.connect("mongodb://localhost/budget", {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
-//   useFindAndModify: false
+//   useFindAndModify: false,
+//   useCreateIndex: true
 // });
 
 const db = require('./config/keys').mongoURI;
