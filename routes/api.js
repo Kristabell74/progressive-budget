@@ -2,11 +2,12 @@ const router = require("express").Router();
 const Transaction = require("../models/transaction.js");
 const { MongoClient } = require("mongodb");
 
-const url = "mongodb+srv://Kristabell74:<password>@cluster0.21gxu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
 
 router.post("/api/transaction", ({ body }, res) => {
   Transaction.create(body)
     .then(dbTransaction => {
+
       res.json(dbTransaction);
     })
     .catch(err => {

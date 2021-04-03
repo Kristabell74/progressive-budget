@@ -13,8 +13,7 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
-app.use(require("./routes/api.js"));
+
 
 // mongoose.connect("mongodb://localhost/budget", {
 //   useNewUrlParser: true,
@@ -29,6 +28,10 @@ mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("connected to mongodb succesfully"))
   .catch(err => console.log(err))
+
+
+app.use(express.static("public"));
+app.use(require("./routes/api.js"));
 
 
 
