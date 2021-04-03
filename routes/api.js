@@ -1,11 +1,11 @@
 const router = require("express").Router();
 const Transaction = require("../models/transaction.js");
-
 const { MongoClient } = require("mongodb");
 
 router.post("/api/transaction", ({ body }, res) => {
   Transaction.create(body)
     .then(dbTransaction => {
+      console.log(dbTransaction);
       res.json(dbTransaction);
     })
     .catch(err => {
@@ -34,7 +34,3 @@ router.get("/api/transaction", (req, res) => {
 });
 
 module.exports = router;
-
-
-
-

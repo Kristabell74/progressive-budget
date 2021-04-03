@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v2";
+const CACHE_NAME = "static-cache-v3";
 const DATA_CACHE_NAME = "data-cache-v1";
 
 const FILES_TO_CACHE = [
@@ -10,6 +10,8 @@ const FILES_TO_CACHE = [
     "/index.html",
     "/styles.css",
     "/index.js",
+    "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+    "https://cdn.jsdelivr.net/npm/chart.js@2.8.0"
 ]
 
 
