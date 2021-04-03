@@ -24,6 +24,7 @@ app.use(express.json());
 
 const db = require('./config/keys').mongoURI;
 console.log(db, 'this is the db')
+console.log(db)
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("connected to mongodb succesfully"))
