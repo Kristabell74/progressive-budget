@@ -19,7 +19,7 @@ function populateTotal() {
     .reduce((total, t) => {
       return total + parseInt(t.value);
     }, 0)
-    .toFixed(2);
+    .toFixed(2)
 
   let totalEl = document.querySelector("#total");
   totalEl.textContent = total;
@@ -53,7 +53,7 @@ function populateChart() {
   });
 
   // create incremental values for chart
-  let data = reversed.map((t) => {
+  let data = reversed.map(t => {
     sum += parseInt(t.value);
     return sum;
   });
@@ -74,8 +74,8 @@ function populateChart() {
         fill: true,
         backgroundColor: "#6666ff",
         data
-      }],
-    },
+      }]
+    }
   });
 }
 
@@ -120,7 +120,7 @@ function sendTransaction(isAdding) {
     headers: {
       Accept: "application/json, text/plain, */*",
       "Content-Type": "application/json"
-    },
+    }
   })
     .then(response => {
       return response.json();
