@@ -19,6 +19,7 @@ app.use(express.json());
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 //   useFindAndModify: false,
+//   useCreateIndex: true
 // });
 
 const db = require('./config/keys').mongoURI;
