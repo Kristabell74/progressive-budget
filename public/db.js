@@ -4,7 +4,7 @@ const request = indexedDB.open("budget", 1);
 
 //stores the pending objects
 request.onupgradeneeded = (act) => {
-    db = act.target.result;
+    const db = act.target.result;
     db.createObjectStore("pending", { autoIncrement: true });
 };
 
